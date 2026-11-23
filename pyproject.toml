@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leakage-audit"
+version = "0.1.0"
+description = "Two-stage audit for image classification datasets: duplicate-leakage detection and an acquisition-bias probe."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Hossein Ahmadi" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "Pillow",
+    "ImageHash",
+    "scikit-learn",
+]
+
+[project.scripts]
+leakage-audit = "leakage_audit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ahmadi-hossein/leakage-audit"
+
+[tool.setuptools.packages.find]
+where = ["src"]
