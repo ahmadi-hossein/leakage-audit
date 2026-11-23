@@ -42,6 +42,22 @@ pip install .
 Requires Python 3.10+ and depends on numpy, Pillow, ImageHash and
 scikit-learn.
 
+## Web app (Streamlit)
+
+Prefer clicking to a command line? The repo ships a Streamlit app
+(`app.py`) with the same audit: pick the built-in demo dataset or upload
+a ZIP of your own images (one subfolder per class), run the duplicate
+audit, see how much a random split leaks, download a leakage-free
+cluster-aware split, and run the acquisition-bias probe.
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The same app deploys free on Streamlit Community Cloud: point it at
+this repository with `app.py` as the main file.
+
 ## Quickstart
 
 The dataset layout is one subfolder per class:
